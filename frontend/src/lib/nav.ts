@@ -20,6 +20,10 @@ const navItems: NavItemList = {
         {
             name: "Smooth Image (Convolutional)",
             urlPath: "smooth-conv"
+        },
+        {
+            name: "Object Extraction",
+            urlPath: "object-extraction"
         }
     ],
     data: [

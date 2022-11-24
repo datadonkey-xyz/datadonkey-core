@@ -1,7 +1,7 @@
 <script>
 	import { goto } from "$app/navigation";
 	import { ClickableTile, Column, Grid, Row} from "carbon-components-svelte";
-	import { Fire, FunctionMath, WatsonHealthSmoothing } from "carbon-icons-svelte";
+	import { Fire, FunctionMath, ImageSearchAlt, VisualRecognition, WatsonHealthSmoothing } from "carbon-icons-svelte";
 
 </script>
 <h1>Lab Tools</h1>
@@ -52,12 +52,12 @@
       </ClickableTile>
     </Column>
     <Column>
-      <ClickableTile href="/imaging/heatmap">
+      <ClickableTile href="/imaging/object-extraction">
         <div class="tile-row">
-          <Fire size={32}/>
+          <ImageSearchAlt size={32}/>
           <div class="tile-col">
-            <h4>Heatmap</h4>
-            <p>Generates a heatmap of pixel intensities.</p>
+            <h4>Simple Object Extraction</h4>
+            <p>Extracts objects from the image given light intensity criteria.</p>
           </div>
         </div>
       </ClickableTile>

@@ -8,7 +8,7 @@
 
 <FileUploader 
   multiple={false}
-  buttonLabel="Upload file"
+  buttonLabel={`Upload ${type == 'image' ? 'image' : 'file'}`}
   status="complete"
   accept={(() => {
     switch (type) {

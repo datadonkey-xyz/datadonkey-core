@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button, Checkbox, FileUploaderButton, FormLabel, Select, SelectItem, SelectItemGroup, StructuredList, StructuredListBody, StructuredListCell, StructuredListHead, StructuredListRow } from "carbon-components-svelte";
+	import { Button, ButtonSet, Checkbox, FileUploaderButton, FormLabel, Select, SelectItem, SelectItemGroup, StructuredList, StructuredListBody, StructuredListCell, StructuredListHead, StructuredListRow } from "carbon-components-svelte";
 	import { Checkmark, FunctionMath, Group, Label, Save } from "carbon-icons-svelte";
 	import SelectFileSingle from "src/components/SelectFileSingle.svelte";
   import { MathQuill } from "svelte-mathquill";
@@ -70,6 +70,7 @@ bind:files
 </StructuredList>
 </div>
 
+<FormLabel>Config Options</FormLabel>
 <Checkbox labelText="Automatically calculate intensity maxima & minima" bind:checked={autoMinMax}/>
 <Checkbox labelText="Ouptut a heatmap" bind:checked={heatmapOutput}/>
 <br>
