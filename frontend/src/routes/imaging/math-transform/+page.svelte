@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Button, ButtonSet, Checkbox, FileUploaderButton, FormLabel, Select, SelectItem, SelectItemGroup, StructuredList, StructuredListBody, StructuredListCell, StructuredListHead, StructuredListRow } from "carbon-components-svelte";
-	import { Checkmark, FunctionMath, Group, Label, Save } from "carbon-icons-svelte";
+	import { Button, Checkbox, FormLabel, ImageLoader, StructuredList, StructuredListBody, StructuredListCell, StructuredListHead, StructuredListRow } from "carbon-components-svelte";
+	import { Checkmark, FunctionMath, Image, Save } from "carbon-icons-svelte";
 	import SelectFileSingle from "src/components/SelectFileSingle.svelte";
-  import { MathQuill } from "svelte-mathquill";
+	import { MathQuill } from "svelte-mathquill";
 
   // inputs
   let files: File[] = [];
@@ -14,7 +14,11 @@
 
   // state
   let loading = false;
-  let finished = false;
+  let finished = true;
+
+  // outputs
+  let imageOutData = ""
+
 </script>
 
 <div class="title-row">
@@ -76,4 +80,5 @@ bind:files
 <br>
 
 <Button on:click={() => {}} icon={Checkmark}>Apply Transformation</Button>
+<Button on:click={() => {}} icon={Image} kind="secondary" disabled={!finished}>View Output</Button>
 <Button on:click={() => {}} icon={Save} kind="secondary" disabled={!finished}>Save Output</Button>
